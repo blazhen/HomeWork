@@ -1,0 +1,735 @@
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text|Karla&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Crimson Text", serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.green {
+  color: #c6c00f;
+}
+
+#landing {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url(img/landing.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#landing:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  box-shadow: inset 120px 100px 250px #000, inset -120px -100px 250px #000;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-top: 1rem;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  /* height: 12vh; */
+}
+
+.hamburger {
+  transition: 200ms;
+}
+
+.line {
+  width: 2rem;
+  height: 2px;
+  background: #c6c00f;
+  margin-bottom: 5px;
+  transition: 200ms;
+}
+
+.search {
+  color: #c6c00f;
+}
+
+.nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 200px;
+  transition: 200ms;
+  z-index: 3;
+}
+
+.active {
+  display: flex;
+  transition: 200ms;
+}
+
+.nav li {
+  padding-top: 2rem;
+  z-index: 4;
+}
+
+.nav a {
+  color: #fff;
+}
+
+.logo {
+  text-transform: uppercase;
+}
+
+.landing-content {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  position: relative;
+  z-index: 2;
+}
+
+.landing-content h1 {
+  font-size: 4.6rem;
+  margin: 4rem auto;
+}
+
+.landing-content a {
+  color: #fff;
+  display: inline-block;
+  border: 2px solid #fff;
+  padding: 0.7rem 2.7rem;
+  font-size: 1.3rem;
+  transition: 200ms;
+}
+
+.landing-content a:hover {
+  border: 2px solid #c6c00f;
+  background: #c6c00f;
+}
+
+/* ABOUT */
+
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "about-tea-title about-tea-paragraph"
+    "about-image about-company";
+  grid-gap: 1rem;
+  grid-row-gap: 10rem;
+  width: 70%;
+  margin: 6rem auto;
+}
+
+.about-tea-title {
+  grid-area: about-tea-title;
+  font-size: 3rem;
+  font-weight: 300;
+}
+.about-tea-paragraph {
+  grid-area: about-tea-paragraph;
+  line-height: 21px;
+  color: #5c6769;
+}
+.about-image {
+  grid-area: about-image;
+  width: 90%;
+}
+.about-company {
+  grid-area: about-company;
+}
+
+.about-company h3 {
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.about-company p {
+  line-height: 21px;
+  color: #5c6769;
+}
+
+.about-company a {
+  color: #c6c00f;
+  display: inline-block;
+  border: 2px solid #c6c00f;
+  padding: 0.6rem 2.3rem;
+  transition: 200ms;
+  margin-top: 2rem;
+}
+
+.about-company a:hover {
+  background: #c6c00f;
+  color: #fff;
+}
+
+/* MENU */
+
+#menu {
+  background: url(img/menu-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+#menu h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.menu-grid {
+  background: rgba(255, 255, 255, 0.4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  width: 70%;
+  margin: auto;
+  padding: 2rem 2rem;
+}
+
+.menu-item {
+  display: flex;
+}
+
+.menu-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.menu-item-details > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  padding: 0.6rem;
+  width: 90%;
+  margin: 0 auto;
+  font-family: "Crimson Text", serif;
+}
+
+.menu-item-details > div:first-child {
+  border-bottom: 1px solid #ddd;
+}
+
+/* MENU ITEM IMAGES */
+
+#menu1-item-image {
+  width: 115px;
+  height: 100px;
+  background: url(img/menu-items/tea1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+}
+
+#menu2-item-image {
+  width: 115px;
+  height: 100px;
+  background: url(img/menu-items/tea2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+}
+
+#menu3-item-image {
+  width: 115px;
+  height: 100px;
+  background: url(img/menu-items/tea3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+}
+
+#menu4-item-image {
+  width: 115px;
+  height: 100px;
+  background: url(img/menu-items/tea4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+}
+
+#menu5-item-image {
+  width: 115px;
+  height: 100px;
+  background: url(img/menu-items/tea5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+}
+
+#menu6-item-image {
+  width: 115px;
+  height: 100px;
+  background: url(img/menu-items/tea6.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+}
+
+#menu7-item-image {
+  width: 115px;
+  height: 100px;
+  background: url(img/menu-items/tea7.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+}
+
+#menu8-item-image {
+  width: 115px;
+  height: 100px;
+  background: url(img/menu-items/tea8.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+}
+
+/* NEWS */
+
+.news-container {
+  width: 70%;
+  margin: auto;
+  padding: 2rem 2rem;
+}
+
+.news-container h2 {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.news-grid > div {
+  width: 100%;
+  min-height: 200px;
+  border: 1px solid #fff;
+}
+
+#news1 {
+  grid-row: 1/4;
+}
+
+.news-image img {
+  width: 100%;
+}
+
+.featured-news h3 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.featured-news p {
+  color: #999;
+}
+
+.featured-news a {
+  color: #c6c00f;
+}
+
+.featured-news a:hover {
+  text-decoration: underline;
+}
+
+.featured-news a.btn {
+  color: #fff;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  background-color: #c6c00f;
+  border: 2px solid #c6c00f;
+  margin-top: 1rem;
+  transition: 200ms;
+}
+
+.featured-news a.btn:hover {
+  border: 2px solid #c6c00f;
+  background: #fff;
+  color: #c6c00f;
+  text-decoration: none;
+}
+
+.side-news {
+  display: flex;
+}
+
+.side-news .news-image {
+  flex: 1;
+}
+
+.side-news .news-details {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.side-news h3 {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.side-news p {
+  color: #999;
+}
+
+.side-news a {
+  color: #c6c00f;
+}
+
+.side-news a:hover {
+  color: #c6c00f;
+  text-decoration: underline;
+}
+
+.side-news a.btn {
+  text-decoration: underline;
+  transition: 200ms;
+}
+
+.side-news a.btn:hover {
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+  color: #293436;
+}
+
+/* FOOTER */
+
+#footer {
+  background: #344244;
+}
+
+.footer-upper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-upper h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info,
+.useful-links,
+.oppening-hours,
+.useful-links a {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.contact-info p {
+  padding-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.useful-links li {
+  padding-bottom: 0.5rem;
+}
+
+.useful-links a {
+  color: #ccc;
+}
+
+.oppening-hours > div {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  border-bottom: 0.5px solid #666;
+  padding: 0.5rem;
+  color: #ccc;
+}
+
+.footer-lower {
+  background: #293436;
+  height: 1rem;
+}
+
+#newsletter {
+  background: url(img/newsletter-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+#newsletter h1 {
+  font-size: 3rem;
+  width: 1000px;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+#newsletter p {
+  color: #ccc;
+}
+
+form {
+  margin-bottom: 0.5rem;
+  display: flex;
+  width: 600px;
+}
+
+form input {
+  flex: 4;
+  padding: 1rem;
+  border: 2px solid #c6c00f;
+  font-size: 1rem;
+}
+
+form input:focus {
+  flex: 4;
+  border: 2px solid #c6c00f;
+  outline: none;
+}
+
+form button {
+  flex: 1;
+  border-radius: none;
+  box-shadow: none;
+  color: #fff;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  background-color: #c6c00f;
+  border: 2px solid #c6c00f;
+  transition: 200ms;
+  font-size: 1rem;
+}
+
+form button:hover,
+form button:focus {
+  border: 2px solid #293436;
+  background: #293436;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1100px) {
+  .about-tea-title {
+    font-size: 2rem;
+  }
+
+  .about-company h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-company a {
+    color: #c6c00f;
+    display: inline-block;
+    border: 1px solid #c6c00f;
+    padding: 0.4rem 2rem;
+    transition: 200ms;
+    margin-top: 1.5rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #news1 {
+    grid-column: 1/2;
+  }
+
+  #newsletter h1 {
+    font-size: 2rem;
+    width: 600px;
+  }
+
+  form {
+    width: 500px;
+  }
+
+  form input {
+    flex: 4;
+    padding: 0.5rem;
+    border: 1px solid #c6c00f;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .landing-content h1 {
+    font-size: 3rem;
+  }
+
+  .landing-content a {
+    border: 1px solid #fff;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .landing-content a:hover {
+    border: 1px solid #c6c00f;
+    background: #c6c00f;
+  }
+
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "about-tea-title" "about-tea-paragraph"
+      "about-image" "about-company";
+    grid-gap: 2rem;
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  #newsletter h1 {
+    font-size: 1.5rem;
+    width: 400px;
+  }
+
+  #newsletter p {
+    font-size: 0.7rem;
+  }
+
+  form {
+    width: 400px;
+    flex-direction: column;
+  }
+
+  form input {
+    padding: 1rem;
+    border: 1px solid #c6c00f;
+    font-size: 0.6rem;
+  }
+
+  form button {
+    padding: 0.5rem 1.5rem;
+    background-color: #c6c00f;
+    border: 2px solid #c6c00f;
+    transition: 200ms;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+  }
+
+  .footer-upper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-upper > * {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    font-size: 1rem;
+  }
+
+  .landing-content h1 {
+    font-size: 2rem;
+  }
+
+  .menu-grid,
+  .news-container {
+    width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #menu1-item-image,
+  #menu2-item-image,
+  #menu3-item-image,
+  #menu4-item-image,
+  #menu5-item-image,
+  #menu6-item-image,
+  #menu7-item-image,
+  #menu8-item-image {
+    height: 90px;
+  }
+
+  #newsletter h1 {
+    font-size: 1.3rem;
+    width: 300px;
+  }
+
+  #newsletter p {
+    font-size: 0.5rem;
+    width: 300px;
+    text-align: center;
+    color: #fff;
+  }
+
+  form {
+    width: 300px;
+  }
+
+  .side-news {
+    align-items: center;
+  }
+}
